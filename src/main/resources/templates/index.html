@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+
+    <title>法律服务中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/magic-check.css"/>
+    <link rel="stylesheet" href="vendor/sweetAlert/sweetalert.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap-switch/bootstrap-switch.min.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/page/page.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/jeDate/jedate.css"/>
+    <link rel="stylesheet" href="css/flyz.css"/>
+    <link rel="stylesheet" href="css/legal.css"/>
+
+    <script src="vendor/jquery/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="config/urlConfig.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendor/angular/1.4.8/angular/angular.min.js"></script>
+    <script src="vendor/angular/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="vendor/angular/oclazyload/src/ocLazyLoad.min.js"></script>
+
+    <script src="vendor/angular/ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="vendor/bootstrap-switch/bootstrap-switch.min.js"></script>
+
+    <script src="vendor/jeDate/jquery.jedate.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendor/sweetAlert/sweetalert.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="vendor/page/page.js"></script>
+
+    <script src="js/app.js" type="text/javascript"></script>
+    
+    <script src="config/config.js"></script>
+    <script src="config/config.lazyLoad.js"></script>
+   
+    <script src="app/app.router.js"></script>
+    <script src="js/angular-file-upload.js"></script>
+    <script src="js/filter/toTrustedBrFilter.js"></script>
+    <script src="js/service/refreshTokenService.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="vendor/qiniu/qiniu.min.js"></script>   
+</head>
+<body th:attr="skey=${skey}">
+    <div ui-view ng-controller="AppCtrl" class="h-full"></div>
+</body>
+</html>

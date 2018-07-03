@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.module.mapper.LegalMechanismMapper">
+
+    <select id="findFristNearLegalMechanism" resultType="map">
+        select l.id,
+        round(6378.138*2*asin(sqrt(pow(sin( (#{lat}*pi()/180-l.latitude*pi()/180)/2),2)
+        +cos(#{lat}*pi()/180)*cos(l.latitude*pi()/180)* pow(sin( (#{lng}*pi()/180-l.longitude*pi()/180)/2),2)))*1000) distance
+        from legal_mechanism l order by distance desc LIMIT 1
+    </select>
+
+</mapper>
